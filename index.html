@@ -28,6 +28,14 @@
                   autoplay
                   auto-rotate>
     </model-viewer>
+
+    <script>
+      const modelViewer = document.querySelector("model-viewer");
+      modelViewer.addEventListener('load',()=>{
+          const names = modelViewer.availableAnimations;
+          console.log(names);
+        });
+    </script>
   </div>
   
   <!-- 💁 Include both scripts below to support all browsers! -->
