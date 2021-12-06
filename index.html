@@ -13,7 +13,7 @@
   </head> 
 <body>
   <div class="model-container">
-    <model-viewer class="model-viewer"
+    <!-- <model-viewer class="model-viewer"
                   src="/model/ASIC-xmas.glb"
                   ios-src="/model/ASIC-xmas.usdz"
                   poster=""
@@ -21,21 +21,39 @@
                   ar
                   ar-modes="webxr scene-viewer quick-look"
                   ar-scale="auto"
-                  ar-placement="floor"
+                  ar-placement="wall"
                   shadow-intensity="1"
                   camera-controls
-                  camera-target="auto auto auto"
                   autoplay
                   auto-rotate>
-    </model-viewer>
+    </model-viewer> -->
 
-    <script>
-      const modelViewer = document.querySelector("model-viewer");
-      modelViewer.addEventListener('load',()=>{
-          const names = modelViewer.availableAnimations;
-          console.log(names);
-        });
-    </script>
+
+    <model-viewer class="model-viewer"
+                  bounds="tight" 
+                  src="/model/ASIC-xmas.glb" 
+                  ios-src="/model/ASIC-xmas.usdz"
+                  ar 
+                  ar-modes="scene-viewer webxr quick-look" 
+                  camera-controls 
+                  shadow-intensity="1" 
+                  animation-name="Cylinder007|Take 001|BaseLayer.001" 
+                  min-camera-orbit="180deg 82deg 0.4588m" 
+                  max-camera-orbit="180deg 82deg auto" 
+                  min-field-of-view="45deg" 
+                  exposure="1.56" 
+                  autoplay
+                  auto-rotate 
+                  camera-orbit="480deg 82deg auto">
+
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+  </model-viewer>
+
   </div>
   
   <!-- 💁 Include both scripts below to support all browsers! -->
