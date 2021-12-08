@@ -25,9 +25,16 @@
                   auto-rotate 
                   >
     </model-viewer>
-    <audio src="/christmas.mp3" autoplay>
+    <!-- <audio src="/christmas.mp3" autoplay>
       <p>If you are reading this, it is because your browser does not support the audio element</p>
-    </audio>
+    </audio> -->
+
+    <div id="player">
+      <audio autoplay hidden>
+       <source src="christmas.mp3" type="audio/mp3">
+                  If you're reading this, audio isn't supported. 
+      </audio>
+  </div>
 
   </div>
   
