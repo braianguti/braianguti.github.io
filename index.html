@@ -13,22 +13,6 @@
   </head> 
 <body>
   <div class="model-container">
-    <!-- <model-viewer class="model-viewer"
-                  src="/model/ASIC-xmas.glb"
-                  ios-src="/model/ASIC-xmas.usdz"
-                  poster=""
-                  alt="XMas"
-                  ar
-                  ar-modes="webxr scene-viewer quick-look"
-                  ar-scale="auto"
-                  shadow-intensity="1"
-                  camera-controls
-                  autoplay
-                  auto-rotate
-                  >
-    </model-viewer> -->
-
-
     <model-viewer class="model-viewer"
                   src="/model/Cypha-xmas.glb"
                   ios-src="/model/test.usdz"
@@ -40,10 +24,13 @@
                   autoplay
                   auto-rotate 
                   >
-  </model-viewer>
-  <audio id="player" autoplay loop>
-    <source src="/christmas.mp3" type="audio/mp3">  
-  </audio>
+    </model-viewer>
+    <!-- <audio id="player" controls autoplay loop>
+      <source src="/christmas.mp3" type="audio/mp3">  
+    </audio> -->
+
+    <embed src="/christmas.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />
+
   </div>
   
   <!-- 💁 Include both scripts below to support all browsers! -->
